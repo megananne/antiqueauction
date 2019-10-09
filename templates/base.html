@@ -1,3 +1,4 @@
+{% load static from staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,7 @@
     <title>Antique Auction</title>
     
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 
 
 </head>
@@ -59,9 +60,24 @@
     <li><a href="collapsible.html">Javascript</a></li>
     <li><a href="mobile.html">Mobile</a></li>
   </ul>
-       
+
      
-    
+<footer>
+      <div class="row footer">
+      <div class="col-lg-12">
+
+        <h6 style="text-align: right;">Contact us: megansantiquesauction@hotmail.co.uk</h6>
+        <h6>Copyright © 2019 Megan's Online Antique's Auction</h6>
+
+
+
+      </div>
+      <a href="" class="fa fa-facebook"></a>
+      <a href="" class="fa fa-twitter"></a>
+      <a href="" class="fa fa-instagram"></a>
+
+    </div>
+</footer>    
     
     
     {% block content %}

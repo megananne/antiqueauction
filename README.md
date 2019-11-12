@@ -1,14 +1,32 @@
-         ___        ______     ____ _                 _  ___  
-        / \ \      / / ___|   / ___| | ___  _   _  __| |/ _ \ 
-       / _ \ \ /\ / /\___ \  | |   | |/ _ \| | | |/ _` | (_) |
-      / ___ \ V  V /  ___) | | |___| | (_) | |_| | (_| |\__, |
-     /_/   \_\_/\_/  |____/   \____|_|\___/ \__,_|\__,_|  /_/ 
- ----------------------------------------------------------------- 
+# Megan's Antiques
+
+This website is an ecommerce site that allows users to purchase antiques from the site.
+
+## UX
+
+## Features
+
+## Features left to implement
+
+## Technologies used
+
+* HTML
+* Python
+* Django
+* Bootsrap
+
+https://getbootstrap.com/
 
 
-Hi there! Welcome to AWS Cloud9!
+## Responsiveness
 
-To get started, create some files, play with the terminal,
-or visit https://docs.aws.amazon.com/console/cloud9/ for our documentation.
+## Bugs/Errors
 
-Happy coding!
+## Deployment
+
+Github
+
+## Credits
+
+I have searched antique websites on Google to find images and information on products to sell. I have used websites like 'Auto Trader', 'Barneby's.
+

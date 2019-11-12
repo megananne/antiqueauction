@@ -38,6 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
+    'accounts',
+    'checkout',
+    'django_forms_bootstrap',
+    'products'
+
     
 ]
 

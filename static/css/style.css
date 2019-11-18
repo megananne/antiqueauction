@@ -6,12 +6,43 @@ body {
     background-color: #b1a296;
     color: #113773; /*dark blue*/
 }
-
-nav{
-    background-color: #b1a296;
-    color: #113773; /*dark blue*/
+.nav-item {
+  position: relative;
 }
-
+.navbar-collapse ul li a.nav-link:before {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background-color: red;
+    width: 100%;
+    height: 2px;
+    background: transparent;
+    content: '';
+    opacity: 0;
+    -ms-transition: opacity 0.3s, -webkit-transform 0.3s;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    -ms-transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+}
+.navbar-collapse ul li:hover a.nav-link:before {
+    opacity: 1;
+    -ms-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    bottom: 0px;
+    background-color: #b1a296;
+}
+.dropdown-item:hover, .dropdown-item:focus {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #dd4343;
+}
+.dropdown-menu {
+  border: 0px;
+}
+/* General Styles*/
 .button {
   background-color: #c97a20; /*dark blue*/
   border: none;
@@ -21,8 +52,8 @@ nav{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  margin-bottom: 30px;
 }
-
 .button1 {
   background-color: #113773; /*dark blue*/
   border: none;
@@ -33,9 +64,8 @@ nav{
   display: inline-block;
   font-size: 16px;
   margin-left: 30%;
+  margin-bottom: 30px;
 }
-
-
 .cover {
    width: 100%;
    height:75%;
@@ -44,23 +74,19 @@ nav{
 .cover > img {
    width: 100%;
 }
-
 /* social media icons */
-
 .fa-twitter {
     margin-left: 5px;
     color: white;
     float: right;
     font-size: 20px;
 }
-
 .fa-instagram {
     color: white;
     float: right;
     margin-left: 5px;
     font-size: 20px;
 }
-
 .fa-facebook {
     float: right;
     color: white;

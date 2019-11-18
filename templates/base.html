@@ -18,56 +18,54 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+
 
 <body>
     <!-- Dropdown Structure -->
 <ul id="dropdown1" class="dropdown-content">
+    <li><a href="#!">All Antiques</a></li>
     <li><a href="#!">Art</a></li>
-    <li><a href="#!">Cars</a></li>
+    <li><a href="#!">Classic Cars</a></li>
     <li><a href="#!">Clocks</a></li>
     <li><a href="#!">Furniture</a></li>
     <li><a href="#!">Jewellery</a></li>
     <li><a href="#!">Toys</a></li>
-
-    
 </ul>
-<nav>
+<div class="nav-wrapper">
+     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+     <ul class="nav navbar-nav navbar-right">
+       <li><a href="about.html">About</a></li>
+       <li><a href="#!">Shop</a></li>
+                   {% if user.is_authenticated %}
+                       <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+                       <li><a href="#"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                   {%  else %}
+                       <li><a href="#"><i class="fa fa-user-plus"></i> Register</a></li>
+                       <li><a href="#"><i class="fa fa-sign-in"></i> Log In</a></li>
+                   {% endif %}
+                   <li>
+                       <a href="">
+                           <i class="fa fa-shipping-cart"></i> Cart
+                           {% if product_count > 0 %}
+                           <label class="badge badge-warning">{{ product_count }}</label>
+                           {% endif %}
+                       </a>
+                   </li>
+               </ul>
+   </div>
+</nav>
 
 
-    <div class="nav-wrapper">
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="left hide-on-med-and-down">
-        <li><a href="about.html">About</a></li>
-        <li><a href="#!">Shop</a></li>
-        </ul> <!---
-    <ul class="nav navbar-nav navbar-right">
-                    {% if user.is_authenticated %}
-                        <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a></li>
-                        <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
-                    {%  else %}
-                        <li><a href="{% url 'register' %}"><i class="fa fa-user-plus"></i> Register</a></li>
-                        <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Log In</a></li>
-                    {% endif %}
-                    <li>
-                        <a href="">
-                            <i class="fa fa-shipping-cart"></i> Cart
-                            {% if product_count > 0 %}
-                            <label class="badge badge-warning">{{ product_count }}</label>
-                            {% endif %}
-                        </a>
-                    </li>
-                </ul>    
-        
-    </div> ---->
 
 
-  <ul class="sidenav" id="mobile-demo">
-    <li><a href="about.html">About</a></li>
-    <li><a href="#!">Shop</a></li>
 
-  </ul>
-</nav>   
 
     
     {% block content %}

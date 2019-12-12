@@ -3,12 +3,18 @@
 In this project i have built a full-stack site based around business and logic used to control a centrally-owned dataset. This is an ecommerce site that allows users to purchase antiques
 from the site. I decided not to use the project ideas and to create a website which sells antiques instead. I thought this kind of site would be a good way of showing the skills i have
 gained throughout the course. I have used HTML and CSS for the front end design off the project as well as Bootstrap and Font Awsome to contribute to the design of each page. i have done
-a lot of research on antique websites to see what the main products that are sold, the design off an antique website such as colour schemes, fonts and layouts. 
+a lot of research on antique websites to see what the main products that are sold, the design off an antique website such as colour schemes, fonts and layouts. When doing the research for
+this project i realised there was a wide range of products i could choose. I decided to narrow it down to products i thought were most likely to sell such as antique funiture and toys.
 
 
 ## UX
 
 ## Features
+
+* Search bar on the home page to easily search by products.
+* 
+
+
 
 ## Features left to implement
 

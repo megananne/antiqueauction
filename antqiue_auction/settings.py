@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'accounts',
     'checkout',
     'django_forms_bootstrap',
-    'products'
+    'products',
 
     
 ]

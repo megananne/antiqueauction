@@ -18,15 +18,7 @@ from .views import *
 
 
 urlpatterns = [
-    url(r'^$', index, name='products'),
     url(r'^$', index, name='index'),
-    url(r'^home$', index, name='home'),
-    url(r'^products$', products, name='products'),
-    url(r'^all_antiques$', products, name='products'),
-    url(r'^art$', products, name='art'),
-    url(r'^classic_cars$', products, name='classic cars'),
-    url(r'^clocks$', products, name='clocks'),
-    url(r'^furniture$', products, name='furniture'),
-    url(r'^jewellery$', products, name='jewellery'),
-    url(r'^toys$', products, name='toys'),
+    url(r'^about$', about, name='about'),
+
 ]

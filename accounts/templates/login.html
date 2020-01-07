@@ -3,7 +3,7 @@
 {% load static from staticfiles %}
 {% block content %}
 
-
+<div class="loginform">
     <form method="post" action="{% url 'login' %}?next={{ next }}" class="accountform">
         <fieldset class="form-group">
             <legend>Login</legend>

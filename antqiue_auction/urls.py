@@ -19,13 +19,29 @@ from django.contrib import admin
 from home.views import index
 from accounts import urls as urls_accounts
 from products import urls as urls_products
+from checkout import urls as urls_checkout
 from home import urls as urls_home
+from home.views import terms
+from home.views import support
+from home.views import reviews
+from accounts.views import login
+from accounts.views import profile
+from accounts.views import register
+from checkout.views import cart
+from checkout.views import checkout
 
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # url(r'^$', index, name='index'),
+    url(r'^terms$', terms),
+    url(r'^support$', support),
+    url(r'^reviews$', reviews),
+    url(r'^login$', login),
+    url(r'^profiles$', profile),
+    url(r'^register$', register),
+    url(r'^cart$', cart),
     url(r'^accounts/', include(urls_accounts)),
     url(r'^products/', include(urls_products)),
     url(r'^home/', include(urls_home)),

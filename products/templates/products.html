@@ -2,38 +2,33 @@
 {% load bootstrap_tags %}
 {% load static from staticfiles %}
 {% block content %}
-<div class="row headingtxt">
-    <h2><b>{% if product.name %}{{ product.name }} {% else %}All {% endif %}Products</b></h2>
-</div>
+
+
+
+<div class="container">
+<div class="row ">
+    
+
 {% for product in products %}
-<body class= "page-id-2">
 
-<div class="row products">
-  <div class="col-sm-3 col-sm-3">
+
+
+  <div class="col-6">
+    
     <div class="thumbnail">
-      <img class="materialboxed imgurl" width="200" border="5" float="right" src="{{ product.image }}" style="margin-bottom: 20px;" alt="...">
+    <!--  <img class="materialboxed imgurl" width="50%" border="5" float="right" src="{{ product.image }}" style="margin-bottom: 20px;" alt="..."> --->
       <div class="caption">
         <h4>{{ product.name }}</h4>
         <p>{{ product.description }}</p>
         <h4>£{{ product.price }}</h4>
-        <p><a href="#" class="btn btn-primary button" role="button">Buy</a> <a href="/singleproducts" class="btn btn-default button" role="button">Bid</a></p>
+        <p><a href="#" class="btn btn-primary button" role="button">Checkout</a> <a href="/singleproducts" class="btn btn-default button" role="button">Add To Cart</a></p>
       </div>
     </div>
   </div>
-    <div class="col-sm-3 col-sm-3">
-    <div class="thumbnail">
-      <img class="materialboxed imgurl" width="200" border="5" float="right" src="{{ product.image }}" style="margin-bottom: 20px;" alt="...">
-      <div class="caption">
-        <h4>{{ product.name }}</h4>
-        <p>{{ product.description }}</p>
-        <h4>£{{ product.price }}</h4>
-        <p><a href="#" class="btn btn-primary button" role="button">Checkout</a> <a href="#" class="btn btn-default button" role="button">Add to Cart</a></p>
-      </div>
-    </div>
-  </div>
+ 
+
+{% endfor %} 
+
 </div>
-</body>
-
-
-{% endfor %}
+  </div>
 {% endblock %}

@@ -31,7 +31,7 @@
         <!-- Dropdown Structure -->
 
 <nav class="navbar navbar-expand-lg ">
-  <a class="navbar-brand" href="/home">Megan's Antiques</a>
+  <a class="navbar-brand" href="{% url 'index' %}">Megan's Antiques</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -39,7 +39,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/about">About Us</a>
@@ -60,57 +60,36 @@
         </div>
       </li>
     </ul>
-      <ul class="navbar-nav mr-0">
+               
+                     <ul class="navbar-nav mr-0">
                    {% if user.is_authenticated %}
                        <li class="nav-item">
-                         <a class="nav-link" href="profiles.html"><i class="fa fa-user"></i>Profile</a></li>
+                         <a class="nav-link" href="/profiles"></i>Profile</a></li>
                        <li class="nav-item">
-                         <a href="#"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                         <a href="/login"></i> Log Out</a></li>
                    {%  else %}
                        <li class="nav-item">
-                         <a class="nav-link" href="register.html"><i class="fa fa-user-plus"></i>Register</a></li>
+                         <a class="nav-link" href="/register"></i>Register</a></li>
                        <li class="nav-item">
-                         <a class="nav-link" href="login.html"><i class="fa fa-sign-in"></i>Log In</a></li>
+                         <a class="nav-link" href="/login"></i>Log In</a></li>
                    {% endif %}
                    <li class="nav-item">
-                       <a class="nav-link" href="cart.html">
+                       <a class="nav-link" href="/cart">
                            Cart
                            {% if product_count > 0 %}
-                           <label class="badge badge-warning">{{ product_count }}</label>
                            {% endif %}
                        </a>
                    </li>
                </ul>
   </div>
-</nav>
-
-
-
-
-
-
-
+</nav> 
 
     
     {% block content %}
+    
+    
     {% endblock %}
- <!--- <footer style="positon: fixed">
-      <div class="row footer">
-      <div class="col-lg-12">
-
-     <b><h4 style="text-align: right;">Contact us: contact@megansantiques.co.uk</h4></b>
-        <b><h4>Copyright © 2019 Megan's Online Antique's Auction</h4></b>
-
-
-
-      </div>
-      <a href="" class="fa fa-facebook"></a>
-      <a href="" class="fa fa-twitter"></a>
-      <a href="" class="fa fa-instagram"></a>
-
-    </div>
-</footer>    -->
-
+ 
 <!-- Footer -->
 <footer class="page-footer font-small pt-4">
 
@@ -138,6 +117,10 @@
             Howden, Hull<br>
             East Yorkshire<br>
             HU15 ERF</h6>
+            <a href="" class="fa fa-facebook"></a>
+            <a href="" class="fa fa-twitter"></a>
+            <a href="" class="fa fa-instagram"></a>
+
 
       </div>
       <!-- Grid column -->
@@ -155,7 +138,7 @@
             <a href="/about">About Us</a>
           </li>
           <li>
-            <a href="/review">Reviews</a>
+            <a href="/reviews">Reviews</a>
           </li>
           <li>
             <a href="/terms">Terms of Use</a>
@@ -205,8 +188,8 @@
   <!-- Footer Links -->
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2018 Copyright:
-    <a href="https://5d462220ad3540c1af9d4b49bfd9c152.vfs.cloud9.us-east-1.amazonaws.com/"</a>
+  <div class="footer-copyright text-center py-3">© 2019 Copyright: Megan's Online Antique's Auction
+    
   </div>
   <!-- Copyright -->
 

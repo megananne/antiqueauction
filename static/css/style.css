@@ -55,6 +55,7 @@ a{
 .button {
   background-color: #c97a20;
   border: none;
+  box-shadow: 5px 10px 8px #888888;
   color: white;
   padding-left: 32px;
   padding-right: 32px;
@@ -75,6 +76,7 @@ a{
 }
 .button1 {
   background-color: #c97a20;
+  box-shadow: 5px 10px 8px #888888;
   border: none;
   color: white;
   padding-left: 32px;
@@ -91,6 +93,7 @@ a{
 
 .submitbutton {
   background-color: #c97a20;
+  box-shadow: 5px 10px 8px #888888;
   border: none;
   color: white;
   padding-left: 32px;
@@ -140,9 +143,6 @@ a{
 
 .page-id-2 {background-color: #807b6c;}
 
-.products{
-    margin-left: 400px;
-}
 
 
 .headingtxt{
@@ -159,6 +159,7 @@ a{
     width: 90%;
     border-style: solid;
     border-width: 15px;
+    box-shadow: 5px 10px 8px #888888;
     border-color: #807b6c;
     padding: 50px;
     margin-top: 40px;
@@ -172,6 +173,7 @@ a{
     border-style: solid;
     border-width: 15px;
     border-color: #c97a20;
+    box-shadow: 5px 10px 8px #888888;
     color: white;
     text-align: center;
     padding: 50px;
@@ -186,6 +188,7 @@ a{
     border-style: solid;
     border-width: 15px;
     border-color: #807b6c;
+    box-shadow: 5px 10px 8px #888888;
     padding: 50px;
     margin-top: 40px;
     margin-left: 90px;
@@ -234,8 +237,10 @@ a{
   border: 2px solid #ccc;
   background-color: #eee;
   border-radius: 5px;
+  box-shadow: 5px 10px 8px #c97a20;
   padding: 16px;
   margin: 16px 0;
+  margin-bottom: 20px;
 }
 
 /* Clear floats after containers */
@@ -270,3 +275,117 @@ a{
     display: block;
   }
 }
+
+
+.reviews{
+  margin-left: 400px;
+  
+}
+
+.reviewheading{
+  text-align: center;
+  margin-top: 50px;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.terms{
+  width: 1400px;
+  background-color: white;
+  padding: 10px;
+  border: 5px solid #b1a296;
+  box-shadow: 5px 10px 8px #888888;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  margin-left: 250px;
+}
+
+.private{
+  width: 1400px;
+  background-color: white;
+  padding: 10px;
+  border: 5px solid #b1a296;
+  box-shadow: 5px 10px 8px #888888;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 250px;
+}
+
+.returns{
+  width: 1400px;
+  background-color: white;
+  padding: 10px;
+  border: 5px solid #b1a296;
+  box-shadow: 5px 10px 8px #888888;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 250px;
+}
+
+.form-group2{
+  width: 600px;
+  background-color: white;
+  margin:50px;
+  color: #c97a20;
+  padding: 5px;
+  margin-left: 270px;
+  border: 5px solid #b1a296;
+  box-shadow: 5px 10px 8px #888888;
+
+}
+
+.form-group2 label{
+  color: #c97a20;
+}
+
+.supportheading{
+  width: 900px;
+  text-align: center;
+  padding: 10px;
+  margin-left: 140px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: white;
+  border: 5px solid #b1a296;
+  box-shadow: 5px 10px 8px #888888;
+}
+
+.support2{
+  width: 1200px;
+  background-color: #807b6c;
+  margin-bottom: 50px;
+  margin-left: 350px;
+  margin-top: 50px;
+  border: 5px solid #b1a296;
+  box-shadow: 5px 10px 8px #888888;
+}
+
+.submitbutton2 {
+  background-color: #c97a20;
+  border: none;
+  box-shadow: 5px 10px 8px #888888;
+  color: white;
+  padding-left: 32px;
+  padding-right: 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 30px;
+  margin-left: 500px;
+  margin-bottom: 30px;
+}
+
+.loginform{
+  margin-top: 50px;
+  margin-left: 650px;
+  width:600px;
+ 
+}
+
+.signupform{
+  margin-top: 50px;
+  margin-left: 650px;
+  width:600px;
+}
+

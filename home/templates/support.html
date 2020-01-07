@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load bootstrap_tags %}
+{% load static from staticfiles %}
+
+{% block content %}
+
+<div class="boxed support2">
+
+
+<div class="supportheading">
+<h2><b>Support</b></h2>
+
+<h4>Please fill the form in below for support and one of our customer service team will get back to use as soon as possible either by phone or email depending on the contact information given.</h4>
+
+
+</div>
+
+
+<form>
+  <div class="form-group form-group2">
+    <label for="exampleFormControlInput1">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+  <div class="form-group form-group2">
+    <label for="exampleFormControlSelect1">Please Choose a Category</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>Orders</option>
+      <option>Delivery</option>
+      <option>Returns</option>
+      <option>Damages</option>
+      <option>Other</option>
+    </select>
+  </div>
+  <div class="form-group form-group2">
+    <label for="exampleFormControlTextarea1">Please Enter Description</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+   <button type="submit" class="btn btn-default submitbutton2">Submit</button>
+</form>
+</div>
+{% endblock %}

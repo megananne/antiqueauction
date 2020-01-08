@@ -50,13 +50,13 @@
           Shop
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="products/all_antiques">All Antiques</a>
-          <a class="dropdown-item" href="products/art">Art</a>
-          <a class="dropdown-item" href="products/classic_cars">Classic Cars</a>
-          <a class="dropdown-item" href="products/clocks">Clocks</a>
-          <a class="dropdown-item" href="products/furniture">Furniture</a>
-          <a class="dropdown-item" href="products/jewellery">Jewellery</a>
-          <a class="dropdown-item" href="products/toys">Toys</a>
+          <a class="dropdown-item" href="{% url 'all_antiques' %}">All Antiques</a>
+          <a class="dropdown-item" href="{% url 'art' %}">Art</a>
+          <a class="dropdown-item" href="{% url 'classic_cars' %}">Classic Cars</a>
+          <a class="dropdown-item" href="{% url 'clocks' %}">Clocks</a>
+          <a class="dropdown-item" href="{% url 'furniture' %}">Furniture</a>
+          <a class="dropdown-item" href="{% url 'jewellery' %}">Jewellery</a>
+          <a class="dropdown-item" href="{% url 'toys' %}">Toys</a>
         </div>
       </li>
     </ul>

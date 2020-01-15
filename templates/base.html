@@ -50,9 +50,9 @@
           Shop
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{% url 'all_antiques' %}">All Antiques</a>
+          <a class="dropdown-item" href="{% url 'products' %}">All Antiques</a>
           <a class="dropdown-item" href="{% url 'art' %}">Art</a>
-          <a class="dropdown-item" href="{% url 'classic_cars' %}">Classic Cars</a>
+          <a class="dropdown-item" href="{% url 'classiccars' %}">Classic Cars</a>
           <a class="dropdown-item" href="{% url 'clocks' %}">Clocks</a>
           <a class="dropdown-item" href="{% url 'furniture' %}">Furniture</a>
           <a class="dropdown-item" href="{% url 'jewellery' %}">Jewellery</a>
@@ -64,7 +64,7 @@
                      <ul class="navbar-nav mr-0">
                    {% if user.is_authenticated %}
                        <li class="nav-item">
-                         <a class="nav-link" href="/profiles"></i>Profile</a></li>
+                         <a class="nav-link" href="{% url 'profile' %}"></i>Profile</a></li>
                        <li class="nav-item">
                          <a href="/login"></i> Log Out</a></li>
                    {%  else %}
@@ -74,8 +74,7 @@
                          <a class="nav-link" href="/login"></i>Log In</a></li>
                    {% endif %}
                    <li class="nav-item">
-                       <a class="nav-link" href="/cart">
-                           Cart
+                       <a class="nav-link" href="{% url 'view_cart' %}">Cart
                            {% if product_count > 0 %}
                            {% endif %}
                        </a>
@@ -159,22 +158,22 @@
 
         <ul class="list-unstyled">
           <li>
-            <a href="products/art">Art</a>
+            <a href="{% url 'art' %}">Art</a>
           </li>
           <li>
-            <a href="products/classic_cars">Classic Cars</a>
+            <a href="{% url 'classiccars' %}">Classic Cars</a>
           </li>
             <li>
-            <a href="products/clocks">Clocks</a>
+            <a href="{% url 'clocks' %}">Clocks</a>
           </li>
           <li>
-            <a href="products/funiture">Furniture</a>
+            <a href="{% url 'furniture' %}">Furniture</a>
           </li>
           <li>
-            <a href="products/jewellery">Jewellery</a>
+            <a href="{% url 'jewellery' %}">Jewellery</a>
           </li>
           <li>
-            <a href="products/toys">Toys</a>
+            <a href="{% url 'toys' %}">Toys</a>
           </li>
         </ul>
 

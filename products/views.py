@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Product, Category
 
 def index(request):
@@ -23,12 +23,6 @@ def get_art(request):
     catagory = get_object_or_404(Category, name="Art")
     products = Product.objects.filter(category=catagory)
     return render(request, "products.html", {"products": products, "catagory":catagory})
-    
-def get_products(request):
-    """A view that displays the index page"""
-    catagory = get_object_or_404(Category, name="All Antiques")
-    products = Product.objects.filter(category=catagory)
-    return render(request, "products.html", {"products": products, "catagory":catagory})
 
 def get_clocks(request):
     """A view that displays the index page"""
@@ -36,9 +30,9 @@ def get_clocks(request):
     products = Product.objects.filter(category=catagory)
     return render(request, "products.html", {"products": products, "catagory":catagory})
     
-def get_classic_cars(request):
+def get_classiccars(request):
     """A view that displays the index page"""
-    catagory = get_object_or_404(Category, name="Classic Cars")
+    catagory = get_object_or_404(Category, name="Cars")
     products = Product.objects.filter(category=catagory)
     return render(request, "products.html", {"products": products, "catagory":catagory})
     

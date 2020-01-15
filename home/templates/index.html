@@ -8,21 +8,6 @@
 
 
 
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="d-block w-100" src="{% static 'images/jewlery_category.jpg' %}" alt="First slide">
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" src="{% static 'images/jewlery_category.jpg' %}" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" src="% static 'images/jewlery_category.jpg' %}" alt="Third slide">
-        </div>
-    </div>
-</div>
-
-
 <div class="container1">
     <div class="display">
         <form action="" method="get">
@@ -33,13 +18,13 @@
 
 </div>
 
-<button type="button" class="btn btn-default button1" href="products/all_antiques">All Antiques</button>
-<button type="button" class="btn btn-default button" href="products/all_antiques">Art</button>
-<button type="button" class="btn btn-default button" href="products/all_antiques">Classic Cars</button>
-<button type="button" class="btn btn-default button" href="products/all_antiques">Clocks</button>
-<button type="button" class="btn btn-default button" href="products/all_antiques">Furniture</button>
-<button type="button" class="btn btn-default button" href="products/all_antiques">Jewellery</button>
-<button type="button" class="btn btn-default button" href="products/all_antiques">Toys</button>
+<button type="button" class="btn btn-default button1"href="{% url 'products' %}">All Antiques</button>
+<button type="button" class="btn btn-default button" href="{% url 'art' %}">Art</button>
+<button type="button" class="btn btn-default button" href="{% url 'classiccars' %}">Classic Cars</button>
+<button type="button" class="btn btn-default button" href="{% url 'clocks' %}">Clocks</button>
+<button type="button" class="btn btn-default button" href="{% url 'furniture' %}">Furniture</button>
+<button type="button" class="btn btn-default button" href="{% url 'jewellery' %}">Jewellery</button>
+<button type="button" class="btn btn-default button" href="{% url 'toys' %}">Toys</button>
 
 
 

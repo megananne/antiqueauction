@@ -20,6 +20,7 @@ from home.views import index
 from accounts import urls as urls_accounts
 from products import urls as urls_products
 from checkout import urls as urls_checkout
+from cart import urls as urls_cart
 from home import urls as urls_home
 from home.views import terms
 from home.views import support
@@ -27,8 +28,7 @@ from home.views import reviews
 from accounts.views import login
 from accounts.views import profile
 from accounts.views import register
-from checkout.views import cart
-from checkout.views import checkout
+
 
 
 
@@ -39,11 +39,12 @@ urlpatterns = [
     url(r'^support$', support),
     url(r'^reviews$', reviews),
     url(r'^login$', login),
-    url(r'^profiles$', profile),
+    url(r'^profile$', profile),
     url(r'^register$', register),
-    url(r'^cart$', cart),
     url(r'^accounts/', include(urls_accounts)),
     url(r'^products/', include(urls_products)),
     url(r'^home/', include(urls_home)),
     url(r'^', include(urls_home)),
+    url(r'^checkout/', include(urls_checkout)),
+    url(r'^cart/', include(urls_cart)),
 ]

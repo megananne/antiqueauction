@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.com/megananne/antiqueauction.svg?branch=master)](https://travis-ci.com/megananne/antiqueauction)
+
+
+
 # Megan's Antiques
 
 In this project i have built a full-stack site based around business and logic used to control a centrally-owned dataset. This is an ecommerce site that allows users to purchase antiques

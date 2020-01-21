@@ -24,7 +24,7 @@
         <h4>{{ product.name }}</h4>
         <p>{{ product.description }}<span style="visibility:hidden"></span></p>
         <h4>£{{ product.price }}</h4>
-        <p><a href="{% url 'checkout' %}" class="btn btn-primary button" role="button">Checkout</a> <a method="post" action="{% url 'add_to_cart' product.id %}" class="btn btn-default button" role="button">Add To Cart</a></p>
+        <p><a href="{% url 'checkout' %}" class="btn btn-primary button" role="button">Checkout</a> <a href="{% url 'add_to_cart' product.id %}" class="btn btn-default button" role="button">Add To Cart</a></p>
       </div>
     </div>
   </div>

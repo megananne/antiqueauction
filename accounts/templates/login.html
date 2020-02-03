@@ -2,25 +2,25 @@
 {% load bootstrap_tags %}
 {% load static from staticfiles %}
 {% block content %}
+<div class="login2">
+    <div class="loginform">
+        <form method="post" action="{% url 'login' %}?next={{ next }}" class="accountform">
+            <fieldset class="form-group">
+                <legend>Login</legend>
 
-<div class="loginform">
-    <form method="post" action="{% url 'login' %}?next={{ next }}" class="accountform">
-        <fieldset class="form-group">
-            <legend>Login</legend>
-            
-            {% if next %}
+                {% if next %}
                 <p>No account? <a href="{% url 'register' %}?next={{ next }}">Sign up</a> now.</p>
-            {% else %}        
+                {% else %}
                 <p>No account? <a href="{% url 'register' %}">Sign up</a> now.</p>
-            {% endif %}
-            
-            <br>
-            {% csrf_token %}
-            {{ user_form | as_bootstrap }}
-            
-             <p><a href="{% url 'password_reset' %}">Forgot my password</a></p>
-             
-            <button type="submit" class="btn btn-default button">Login</button>
-        </fieldset>
-    </form>
+                {% endif %}
+
+                <br> {% csrf_token %} {{ user_form | as_bootstrap }}
+
+                <p><a href="{% url 'password_reset' %}">Forgot my password</a></p>
+
+                <button type="submit" class="btn btn-default button btn-login">Login</button>
+            </fieldset>
+        </form>
+    </div>
+</div>  
 {% endblock %}

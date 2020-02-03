@@ -1,7 +1,4 @@
 {% extends 'base.html' %} {% load bootstrap_tags %} {% load static from staticfiles %} {% block content %}
-
-
-
 <div class="row  cover">
     <img src="static/images/homecover.jpg">
 </div>
@@ -12,23 +9,40 @@
     <div class="display">
         <form action="" method="get">
             <input type="text" name="q">
-            <button type="submit" class="btn btn-default submitbutton">Search</button>
+            <button type="submit" class="btn btn-default submitbutton col-md-4 col-lg-1">Search</button>
         </form>
-    </div> 
+    </div>
+</div>
+
+
+<div class="row indeximages">
+    <div class="column">
+        <img src="img_nature.jpg">
+    </div>
+    <div class="column">
+        <img src="img_snow.jpg">
+    </div>
+    <div class="column">
+        <img src="img_mountains.jpg">
+    </div>
+    <div class="column">
+        <img src="img_lights.jpg">
+    </div>
+</div>
+
+
+<div class=" indexbuttons">
+    <a type="button" class="btn btn-default button col-md-4 col-lg-1" href="{% url 'products' %}">All</a>
+    <a type="button" class="btn btn-default button col-md-4 col-lg-1" href="{% url 'art' %}">Art</a>
+    <a type="button" class="btn btn-default button col-md-4 col-lg-1" href="{% url 'classiccars' %}">Cars</a>
+    <a type="button" class="btn btn-default button col-md-4 col-lg-1" href="{% url 'clocks' %}">Clocks</a>
+    <a type="button" class="btn btn-default button col-md-4 col-lg-1" href="{% url 'furniture' %}">Furniture</a>
+    <a type="button" class="btn btn-default button col-md-4 col-lg-1" href="{% url 'jewellery' %}">Jewellery</a>
+    <a type="button" class="btn btn-default button col-md-4 col-lg-1" href="{% url 'toys' %}">Toys</a>
 
 </div>
 
-<button type="button" class="btn btn-default button1"href="{% url 'products' %}">All Antiques</button>
-<button type="button" class="btn btn-default button" href="{% url 'art' %}">Art</button>
-<button type="button" class="btn btn-default button" href="{% url 'classiccars' %}">Classic Cars</button>
-<button type="button" class="btn btn-default button" href="{% url 'clocks' %}">Clocks</button>
-<button type="button" class="btn btn-default button" href="{% url 'furniture' %}">Furniture</button>
-<button type="button" class="btn btn-default button" href="{% url 'jewellery' %}">Jewellery</button>
-<button type="button" class="btn btn-default button" href="{% url 'toys' %}">Toys</button>
 
-
-
-</div>
 
 
 

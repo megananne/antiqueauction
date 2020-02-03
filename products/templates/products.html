@@ -2,7 +2,7 @@
 {% load bootstrap_tags %}
 {% load static from staticfiles %}
 {% block content %}
-
+ <body style="background-color: #5e4c46;"></body>
 
 <div class="wrapper">
 <div class="container-fluid">
@@ -13,18 +13,18 @@
 
 
 
-  <div class="col-6">
+  <div class="col-lg-6 col-sm-11">
     
     <div class="thumbnail">
-    <!---<img class="materialboxed imgurl" width="50%" border="5" float="right" src="{{ product.image }}" style="margin-bottom: 20px;" alt="..."> --->
-    <div style="width: 100%; height: 300px; background-color: white;"></div>
+    <img class="materialboxed imgurl" width="50%" border="5" float="right" src="{{ product.image }}" style="margin-bottom: 20px;" alt="..."> 
+    <!--<div style="width: 100%; height: 300px; background-color: white;"></div>-->
       
     
       <div class="caption">
-        <h4>{{ product.name }}</h4>
-        <p>{{ product.description }}<span style="visibility:hidden"></span></p>
+        <h4>{{ product.name|truncatewords:10 }}</h4>
+        <p>{{ product.description|truncatewords:20 }}<span style="visibility:hidden" maxlength="50"></span></p>
         <h4>£{{ product.price }}</h4>
-        <p><a href="{% url 'checkout' %}" class="btn btn-primary button" role="button">Checkout</a> <a href="{% url 'add_to_cart' product.id %}" class="btn btn-default button" role="button">Add To Cart</a></p>
+        <p><a href="{% url 'checkout' %}" class="btn btn-primary button col-md-12 col-lg-2" role="button">Checkout</a> <a href="{% url 'add_to_cart' product.id %}" class="btn btn-default button col-md-5 col-lg-2" role="button">Add To Cart</a></p>
       </div>
     </div>
   </div>

@@ -1,1 +1,1 @@
-web gunicorn antique_auction.wsgi:application
+web gunicorn antqiue_auction.wsgi:application

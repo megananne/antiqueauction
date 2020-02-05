@@ -2,6 +2,47 @@
 {% load bootstrap_tags %}
 {% load static from staticfiles %}
 {% block content %}
-    <h2>Success!</h2>
-    <p>You are logged in as {{ user.email }} </p>
+<div class="profileform">
+
+  <h2><b>Your Profile</b></h2>
+
+
+
+  <form>
+    <div class="form-group row">
+      <label for="staticName" class="col-sm-2 col-form-label"><b>Name</b></label>
+      <div class="col-sm-6">
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value={{ user.name }}>
+      </div>
+      <button type="submit" class="btn btn-primary edit_btn mb-2">Edit</button>
+    </div>
+    <div class="form-group row">
+      <label for="staticEmail" class="col-sm-2 col-form-label"><b>Email</b></label>
+      <div class="col-sm-6">
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail" style="color:white;" value={{ user.email }}>
+      </div>
+      <button type="submit" class="btn btn-primary edit_btn mb-2">Edit</button>
+    </div>
+    <div class="form-group row">
+      <label for="staticMobile" class="col-sm-2 col-form-label"><b>Mobile</b></label>
+      <div class="col-sm-6">
+        <input type="text" readonly class="form-control-plaintext" id="staticMobile" value={{ user.mobile }}>
+      </div>
+      <button type="submit" class="btn btn-primary edit_btn mb-2">Edit</button>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword" class="col-sm-2 col-form-label"><b>Password</b></label>
+      <div class="col-sm-6">
+        <input type="text" readonly class="form-control-plaintext" id="staticPassword" value={{ user.passwordl }}>
+      </div>
+      <button type="submit" class="btn btn-primary edit_btn mb-2">Edit</button>
+    </div>
+  </form>
+</div>
+</div>
+
+<div class="row">
+  <p><a href="{% url 'checkout' %}" class="btn btn-primary profilebuttons1 col-md-4" role="button">Checkout</a> <a href="{% url 'view_cart' %}" class="btn btn-default profilebuttons2 col-md-4" role="button">Cart</a></p>
+</div>
+</div>
 {% endblock %}

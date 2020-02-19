@@ -94,19 +94,19 @@ WSGI_APPLICATION = 'antqiue_auction.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 
-# if "DATABASE_URL" in os.environ:
-#      DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL')) }
-# else:
-#     print("Database URL not found. Using SQLite instead")
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.sqlite3',
-#             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#         }
-#     }
+if "DATABASE_URL" in os.environ:
+     DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL')) }
+else:
+    print("Database URL not found. Using SQLite instead")
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 
-DATABASES = {'default': dj_database_url.parse("postgres://zlevfleiaqeymv:be9a4e564ffe1a43eca2ed9fa1a6eb766a6e128c6f3766b23b987c3899912ea0@ec2-54-246-89-234.eu-west-1.compute.amazonaws.com:5432/dcbilrmb835nh0")}
+#DATABASES = {'default': dj_database_url.parse("postgres://zlevfleiaqeymv:be9a4e564ffe1a43eca2ed9fa1a6eb766a6e128c6f3766b23b987c3899912ea0@ec2-54-246-89-234.eu-west-1.compute.amazonaws.com:5432/dcbilrmb835nh0")}
 
 
 # Password validation

@@ -25,6 +25,7 @@ from home import urls as urls_home
 from home.views import terms
 from home.views import support
 from home.views import reviews
+from home.views import about
 from accounts.views import login
 from accounts.views import profile
 from accounts.views import register
@@ -36,15 +37,16 @@ from .settings import MEDIA_ROOT
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # url(r'^$', index, name='index'),
-    url(r'^terms$', terms),
-    url(r'^support$', support),
-    url(r'^reviews$', reviews),
-    url(r'^login$', login),
-    url(r'^profile$', profile),
-    url(r'^register$', register),
+    url(r'^terms/$', terms),
+    url(r'^support/$', support),
+    url(r'^reviews/$', reviews),
+    url(r'^login/$', login),
+    url(r'^profile/$', profile),
+    url(r'^register/$', register),
     url(r'^accounts/', include(urls_accounts)),
     url(r'^products/', include(urls_products)),
     url(r'^home/', include(urls_home)),
+    url(r'^about/', about),
     url(r'^$', include(urls_home)),
     url(r'^checkout/', include(urls_checkout)),
     url(r'^cart/', include(urls_cart)),

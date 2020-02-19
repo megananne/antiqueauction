@@ -827,13 +827,12 @@ a {
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) {
   .imgurl{
   width: 200px;
   margin-left: 70px;
   margin-top: 10px;
   margin-bottom: 10px;
-
 
 }
 }
@@ -846,17 +845,6 @@ a {
   margin-top:  5px;
 
 }
-}
-
-
-
-
-.imgurl{
-  width: 50%;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
-  padding: 10px;
 }
 
 

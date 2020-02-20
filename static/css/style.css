@@ -667,7 +667,7 @@ a {
   box-shadow: 5px 10px 8px #888888;
   margin-top: 100px;
   margin-bottom: 50px;
-  margin-left: 250px;
+  margin-left: 10%;
 }
 
 .private {
@@ -678,7 +678,7 @@ a {
   box-shadow: 5px 10px 8px #888888;
   margin-top: 50px;
   margin-bottom: 50px;
-  margin-left: 250px;
+  margin-left: 10%;
 }
 
 .returns {
@@ -689,7 +689,7 @@ a {
   box-shadow: 5px 10px 8px #888888;
   margin-top: 50px;
   margin-bottom: 50px;
-  margin-left: 250px;
+  margin-left: 10%;
 }
 
 
@@ -832,7 +832,8 @@ a {
   width: 200px;
   margin-left: 70px;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  height:100px;
 
 }
 }

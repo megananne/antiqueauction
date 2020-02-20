@@ -834,6 +834,9 @@ a {
   margin-top: 10px;
   margin-bottom: 15px;
   height:200px;
+  border-color: white;
+  border-style: solid;
+  border-width: 5px;
 
 }
 }
@@ -844,7 +847,9 @@ a {
   margin-left: 20%;
   margin-bottom: 5px;
   margin-top:  5px;
-
+  border-color: white;
+  border-style: solid;
+  border-width: 2px;
 }
 }
 

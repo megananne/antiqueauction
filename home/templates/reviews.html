@@ -1,53 +1,64 @@
+<!-- extends base template -->
 {% extends 'base.html' %}
+<!-- to style webpages -->
 {% load bootstrap_tags %}
 {% load static from staticfiles %}
-
 {% block content %}
 
+<!-- body of template -->
+<body class="page-id-2">
+<!-- heading -->
+  <div class=" col-12 col-s-12 reviewheading">
+    <h2><b>Customer Reviews</b></h2>
+    <br>
+    <!-- heading -->
+    <h6>If you would like to write your own review please send it to reviews@megansantiques.com. Please note not all reviews will be accepted to be on our website.</h6>
+  </div>
+  <!-- reviews section -->
+  <div class="reviews">
+    <div class="container">
+      <!-- review user -->
+      <p><span>Emma Heath.</span>Software Developer</p>
+      <!-- review -->
+      <p>I bought a classic car from Megan’s Antiques. I was viewing this particular car for around 6 months and decided to go ahead and buy it. I had several phone conversations with the ‘Cars’ department about the car, they went over all specifications,
+        faults and mechanical information. </p>
+    </div>
 
+    <div class="container">
+      <!-- review user -->
+      <p><span>Matthew Turner.</span>Maths Teacher</p>
+      <!-- review -->
+      <p>4/5 stars. Ordered a chair from here, wrong chair arrived, however the delivery team came back later on in the day with the correct chair. Fantastic customer service and really fast delivery. Happt to use Megan's Antiques again!</p>
+    </div>
+    <div class="container">
+      <!-- review user -->
+      <p><span>Alfie Torn.</span>Personal Trainer</p>
+      <!-- review -->
+      <p>Very nice products for sale! Always adding more to the site, i order regulary from here and have never had any issues. Prices are cheap, delivery is fast and customer service is fantastic. Always impressed with the items i order from Megan's Antiques!</p>
+    </div>
 
+    <div class="container">
+      <!-- review user -->
+      <p><span>Eloise Wright.</span> IT Specialist</p>
+      <!-- review -->
+      <p>5 Stars! Delivered straight to my door, was placed in living room by delivery guys, un-wrapped and checked for damages from delivery. Chair was immaculate. Fast and Cheap Delivery. Worth every penny.</p>
+    </div>
+    <div class="container">
+      <!-- review user -->
+      <p><span>Mary Saunders.</span>Engineer</p>
+      <!-- review -->
+      <p>Great Customer Service! Highly Recommend. Ordered from here several times and each time i am impressed with the item and the delievery time!</p>
+    </div>
 
-
-<body class= "page-id-2">
-
-<div class=" col-12 col-s-12 reviewheading">
-<h2><b>Customer Reviews</b></h2>
-<br>
-<h6>If you would like to write your own review please send it to reviews@megansantiques.com. Please note not all reviews will be accepted to be on our website.</h6></div>
-<div class="reviews">
-<div class="container">
-  <img src="user.JPG" alt="Avatar" style="width:90px">
-  <p><span>Emma Heath.</span>Software Developer</p>
-  <p>I bought a classic car from Megan’s Antiques. I was viewing this particular car for around 6 months and decided to go ahead and buy it. I had several phone conversations with the ‘Cars’ department about the car, they went over all specifications, faults and mechanical information. </p>
-</div>
-
-<div class="container">
-  <img src="user.JPG" alt="Avatar" style="width:90px">
-  <p><span>Matthew Turner.</span>Maths Teacher</p>
-  <p>4/5 stars. Ordered a chair from here, wrong chair arrived, however the delivery team came back later on in the day with the correct chair. Fantastic customer service and really fast delivery. Happt to use Megan's Antiques again!</p>
-</div>
-<div class="container">
-  <img src="user.JPG" alt="Avatar" style="width:90px">
-  <p><span>Alfie Torn.</span>Personal Trainer</p>
-  <p>Very nice products for sale! Always adding more to the site, i order regulary from here and have never had any issues. Prices are cheap, delivery is fast and customer service is fantastic. Always impressed with the items i order from Megan's Antiques!</p>
-</div>
-
-<div class="container">
-  <img src="user.JPG" alt="Avatar" style="width:90px">
-  <p><span>Eloise Wright.</span> IT Specialist</p>
-  <p>5 Stars! Delivered straight to my door, was placed in living room by delivery guys, un-wrapped and checked for damages from delivery. Chair was immaculate. Fast and Cheap Delivery. Worth every penny.</p>
-</div>
-<div class="container">
-  <img src="user.JPG" alt="Avatar" style="width:90px">
-  <p><span>Mary Saunders.</span>Engineer</p>
-  <p>Great Customer Service! Highly Recommend. Ordered from here several times and each time i am impressed with the item and the delievery time!</p>
-</div>
-
-<div class="container">
-  <img src="user.JPG" alt="Avatar" style="width:90px">
-  <p><span >Rebecca Flex.</span>Nurse</p>
-  <p>I purchased an old-fashioned wooden car for my son from Megan’s Antiques; I am very impressed with the quality of the item. The toy is as stated on the website and exceeds my son’s expectations! The delivery was quick and did not cost a fortune! Very pleased with the toy car and will defiantly be using this site again!</p>
-</div></div>
+    <div class="container">
+      <!-- review user -->
+      <p><span>Rebecca Flex.</span>Nurse</p>
+      <!--- review -->
+      <p>I purchased an old-fashioned wooden car for my son from Megan’s Antiques; I am very impressed with the quality of the item. The toy is as stated on the website and exceeds my son’s expectations! The delivery was quick and did not cost a fortune!
+        Very pleased with the toy car and will defiantly be using this site again!</p>
+    </div>
+  </div>
 </body>
 
+<!-- end of template -->
 {% endblock %}

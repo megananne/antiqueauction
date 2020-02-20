@@ -1,45 +1,51 @@
-{% extends 'base.html' %} {% load static from staticfiles %} {% load bootstrap_tags %} {% block content %}
-
+<!--extends base template -->
+{% extends 'base.html' %}
+<!-- to style webpage -->
+{% load static from staticfiles %}
+{% load bootstrap_tags %}
+{% block content %}
+<!-- body of template -->
 <body style="background-color: #5e4c46;"></body>
 
+<!-- cartpage -->
 <div class=" cartpage">
     <div class="row row-flex">
         {% for item in cart_items %}
-
-
+        <!-- product image -->
         <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
         <div class="caption">
+            <!-- product name -->
             <h4>{{ item.product.name }}</h4>
+            <!-- description of product -->
             <p class="product-description">{{ item.product.description|truncatewords:20 }}</p>
-
-            <p>
-                <div class="input-group-addon"><b>Price:</b> &nbsp; £{{ item.product.price }}</p>
-            </div>
-
+            <!-- price of product -->
+            <p> <div class="input-group-addon"><b>Price:</b> &nbsp; £{{ item.product.price }}</p></div>
+            <!-- form -->
             <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
                 {% csrf_token %}
                 <div class="form-group">
+                    <!-- new quantity -->
                     <label for="exampleInputAmount" class="sr-only">New Qty</label>
                     <div class="input-group">
+                        <!-- Quantity heading -->
                         <div class="input-group-addon"><b>Qty:</b> &nbsp; </div>
-
+                        <!-- quantity of products -->
                         <div class="">{{item.quantity}}</div>
                     </div>
                 </div>
-
             </form>
             </p>
         </div>
     </div>
     {% endfor %}
 </div>
-
+<!-- total price heading -->
 <div class="row totaltext">
-    <h3>Total £<span aria-hidden="true"></span>{{ total }}</h3></div>
-<div class="row">    
+    <h3>Total £<span aria-hidden="true"></span>{{ total }}</h3>
+</div>
+<!-- checkout button -->
+<div class="row">
     <a href="{% url 'checkout' %}" class="btn btn-primary checkout_btn" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
 </div>
-
-
-
+<!-- end of template -->
 {% endblock %}

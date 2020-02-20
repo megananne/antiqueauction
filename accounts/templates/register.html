@@ -1,20 +1,25 @@
+<!-- extends base template -->
 {% extends "base.html" %}
+<!-- to style webpage -->
 {% load bootstrap_tags %}
 {% load static from staticfiles %}
 {% block content %}
 
+<!-- sign up form -->
 <div class="signupform">
-
+    <!-- form -->
     <form method="post" action="{% url 'register' %}" class="accountform">
         <fieldset class="form-group">
+            <!-- legend -->
             <legend>Create a new account</legend>
+            <!-- sign in button -->
             <p>Already got an account? <a href="{% url 'login' %}">Sign In</a></p>
             {% csrf_token %}
             {{  user_form | as_bootstrap }}
+            <!-- create account button -->
             <button type="submit" class="btn btn-default button">Create account</button>
         </fieldset>
     </form>
-    </div>
-    
-    
+</div>
+<!-- end of template -->
 {% endblock %}

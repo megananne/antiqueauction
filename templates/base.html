@@ -1,18 +1,24 @@
-{% load bootstrap_tags %} {% load static from staticfiles %}
+{% load bootstrap_tags %}
+{% load static from staticfiles %}
 
+
+<!-- document type -->
 <!DOCTYPE html>
+<!-- language -->
 <html lang="en">
 
+<!-- head -->
+
 <head>
+  <!-- meta tags -->
+  <!-- charset-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- title of webpage -->
   <title>Antique Auction</title>
 
-  <!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
-  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
-
-
+<!-- scripts and links -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -22,179 +28,190 @@
   <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css"> {% block head_js %} {% endblock %}
 
 </head>
+<!-- end of head -->
 
-
-
+<!-- body -->
 <body>
   <!-- Dropdown Structure -->
 
+<!-- navbar-->
   <nav class="navbar navbar-expand-lg nav ">
+    <!-- title -->
     <a class="navbar-brand" href="{% url 'index' %}">Megan's Antiques</a>
+    <!-- home button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
+    <!--left side navbar tabs -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
+          <!-- home tab -->
           <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
+          <!-- about us tab -->
           <a class="nav-link" href="/about">About Us</a>
         </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <!-- shop dropdown -->
           Shop
         </a>
+        <!-- dropdown options -->
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <!-- all antiques dropdown option -->
             <a class="dropdown-item" href="{% url 'products' %}">All Antiques</a>
+            <!-- art dropdown option -->
             <a class="dropdown-item" href="{% url 'art' %}">Art</a>
+            <!-- cars dropdown option -->
             <a class="dropdown-item" href="{% url 'classiccars' %}">Classic Cars</a>
+            <!-- clocks dropdown option -->
             <a class="dropdown-item" href="{% url 'clocks' %}">Clocks</a>
+            <!-- furniture dropdown option -->
             <a class="dropdown-item" href="{% url 'furniture' %}">Furniture</a>
+            <!-- jewellery dropdown option -->
             <a class="dropdown-item" href="{% url 'jewellery' %}">Jewellery</a>
+            <!-- toys dropdown option -->
             <a class="dropdown-item" href="{% url 'toys' %}">Toys</a>
           </div>
         </li>
       </ul>
-
+      <!-- right side of navbar -->
       <ul class="navbar-nav mr-0">
         {% if user.is_authenticated %}
         <li class="nav-item">
-          <a class="nav-link " href="{% url 'profile' %}"><i class="fas fa-user"></i></a></li>
+          <!-- profile icon tab -->
+          <a class="nav-link " href="{% url 'profile' %}" data-toggle="tooltip" title="Profile"><i class="fas fa-user"></i></a></li>
         <li class="nav-item">
-          <a href="/login"><i class="fas fa-sign-in-alt"></i></a></li>
+          <!-- login icon tab -->
+          <a href="/login" data-toggle="tooltip" title="Log In"><i class="fas fa-sign-in-alt"></i></a></li>
         {% else %}
         <li class="nav-item">
-          <a class="nav-link" href="/register"><i class="fas fa-user-plus"></i></li>
+          <!-- register icon tab -->
+          <a class="nav-link" href="/register" data-toggle="tooltip" title="Register"><i class="fas fa-user-plus"></i></li>
         <li class="nav-item">
-          <a class="nav-link" href="/login"><i class="fas fa-sign-out-alt"></i></a></li>
+          <!-- sign out icon tab -->
+          <a class="nav-link" href="/login" data-toggle="tooltip" title="Log Out"><i class="fas fa-sign-out-alt"></i></a></li>
         {% endif %}
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'view_cart' %}"><i class="fas fa-shopping-cart"></i>
+          <!-- shopping cart icon tab -->
+          <a class="nav-link" data-toggle="tooltip" title="Cart" href="{% url 'view_cart' %}"><i class="fas fa-shopping-cart"></i>
                            {% if product_count > 0 %}
                            {% endif %}
-                       </a>
+          </a>
         </li>
       </ul>
     </div>
   </nav>
-  <!-- <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
-  Tooltip on bottom
-</button> --->
+
 
   {% block content %} {% endblock %}
 
   <!-- Footer -->
   <footer class="page-footer font-small pt-4">
-
-    <!-- Footer Links -->
     <div class="container-fluid text-center text-md-left">
-
-      <!-- Grid row -->
       <div class="row">
-
-        <!-- Grid column -->
+        <!-- Bootstrap grid -->
         <div class="col-md-6 mt-md-0 mt-3">
-
-          <!-- Content -->
+          <!-- heading -->
           <h5 class="text-uppercase">Contact</h5>
+          <!-- customer email -->
           <h6><b>Customers Email:</b> customers@megansantiques.com<br>
+          <!-- customer telephone -->
             <b>Customers Tel:</b> 01724 837287
             <br><br>
+            <!-- dealers email -->
             <b>Dealers Email:</b> dealers@megansantiques.com<br>
+            <!-- dealers telephone -->
             <b>Dealers Tel:</b> 01724 837288
             <br><br>
+            <!-- heading -->
             <b>Address</b>
+            <!-- address -->
             <br> Megan's Antiques<br> Head Office & Distribution Centre<br> 1 Rowland Road<br> Howden, Hull<br> East Yorkshire<br> HU15 ERF</h6>
+            <!--- facebook icon -->
           <a href="https://www.facebook.com/" class="fab fa-facebook"></a>
+          <!-- instagram icon -->
           <a href="https://www.instagram.com/?hl=en" class="fab fa-instagram"></a>
+          <!-- twitter icon -->
           <a href="https://twitter.com/?lang=en-gb" class="fab fa-twitter"></a>
-
-
         </div>
-        <!-- Grid column -->
 
         <hr class="clearfix w-100 d-md-none pb-3">
-
-        <!-- Grid column -->
         <div class="col-md-3 mb-md-0 mb-3 footer">
 
           <!-- Links -->
+          <!-- heading -->
           <h5 class="text-uppercase">Company</h5>
 
           <ul class="list-unstyled">
             <li>
+              <!-- about us link -->
               <a href="/about">About Us</a>
             </li>
             <li>
+              <!-- review link -->
               <a href="/reviews">Reviews</a>
             </li>
             <li>
+              <!-- terms of use link -->
               <a href="/terms">Terms of Use</a>
             </li>
             <li>
+              <!-- support link -->
               <a href="/support">Support</a>
             </li>
           </ul>
-
         </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
         <div class="col-md-3 mb-md-0 mb-3">
 
           <!-- Links -->
+          <!-- heading -->
           <h5 class="text-uppercase">Shop</h5>
-
           <ul class="list-unstyled">
             <li>
+              <!-- art products link -->
               <a href="{% url 'art' %}">Art</a>
             </li>
             <li>
+              <!-- cars products link -->
               <a href="{% url 'classiccars' %}">Classic Cars</a>
             </li>
             <li>
+              <!-- clocks products link -->
               <a href="{% url 'clocks' %}">Clocks</a>
             </li>
             <li>
+              <!-- furniture products link -->
               <a href="{% url 'furniture' %}">Furniture</a>
             </li>
             <li>
+              <!-- jewellery products link -->
               <a href="{% url 'jewellery' %}">Jewellery</a>
             </li>
             <li>
+              <!-- toys products link -->
               <a href="{% url 'toys' %}">Toys</a>
             </li>
           </ul>
-
         </div>
-        <!-- Grid column -->
-
       </div>
-      <!-- Grid row -->
-
     </div>
-    <!-- Footer Links -->
-
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© 2019 Copyright: Megan's Online Antique's Auction
-
     </div>
-    <!-- Copyright -->
-
   </footer>
-  <!-- Footer -->
-
+  <!-- end of footer -->
+  
+<!-- tootip for navbar -->
   <script>
     $(document).ready(function() {
       $('.sidenav').sidenav();
       $('[data-toggle="tooltip"]').tooltip()
     });
-    
   </script>
-
+<!-- end of base template -->
 </body>
-
 </html>

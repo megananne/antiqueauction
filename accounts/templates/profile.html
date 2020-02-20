@@ -1,40 +1,50 @@
+<!-- extends base template -->
 {% extends "base.html" %}
+<!-- to style webpage -->
 {% load bootstrap_tags %}
 {% load static from staticfiles %}
 {% block content %}
+
+<!-- profile form -->
 <div class="profileform">
-
+  <!-- title -->
   <h2><b>Your Profile</b></h2>
-
-
-
   <form>
+    <!-- form -->
     <div class="form-group row">
-      <label for="staticName" class="col-sm-2 col-form-label"><b>Name</b></label>
+      <!-- label -->
+      <label for="staticName" class="col-sm-2 col-form-label"><b>Username</b></label>
+      <!-- bootsrap grid -->
       <div class="col-sm-6">
-        <input type="text" readonly class="form-control-plaintext" id="staticEmail" style="color:white;" value={{ user.username }}>
+        <!-- username text -->
+        <input type="text" readonly class="form-control-plaintext" id="staticName" style="color:white;" value={{ user.username }}>
       </div>
-      
     </div>
     <div class="form-group row">
+      <!-- label -->
       <label for="staticEmail" class="col-sm-2 col-form-label"><b>Email</b></label>
+      <!-- bootsrap grid -->
       <div class="col-sm-6">
+        <!-- email text -->
         <input type="text" readonly class="form-control-plaintext" id="staticEmail" style="color:white;" value={{ user.email }}>
       </div>
     </div>
     <div class="form-group row">
+      <!-- label -->
       <label for="inputPassword" class="col-sm-2 col-form-label"><b>Password</b></label>
+      <!-- bootsrap grid -->
       <div class="col-sm-6">
+        <!-- password text -->
         <input type="text" readonly class="form-control-plaintext" id="staticPassword" style="color:white;" value={{ user.password }}>
       </div>
-      
     </div>
   </form>
 </div>
-</div>
-
 <div class="row">
-  <p><a href="{% url 'checkout' %}" class="btn btn-primary profilebuttons1 col-md-4" role="button">Checkout</a> <a href="{% url 'view_cart' %}" class="btn btn-default profilebuttons2 col-md-4" role="button">Cart</a></p>
+  <!-- checkout button -->
+  <p><a href="{% url 'checkout' %}" class="btn btn-primary profilebuttons1 col-md-4" role="button">Checkout</a>
+  <!-- cart button -->
+  <a href="{% url 'view_cart' %}" class="btn btn-default profilebuttons2 col-md-4" role="button">Cart</a></p>
 </div>
-</div>
+<!-- end of template -->
 {% endblock %}

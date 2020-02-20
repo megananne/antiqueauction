@@ -1,47 +1,41 @@
+<!-- extends base template -->
 {% extends 'base.html' %}
+<!-- to style webpage -->
 {% load bootstrap_tags %}
 {% load static from staticfiles %}
 {% block content %}
- <body style="background-color: #5e4c46;"></body>
 
+<!-- products page body / background colour -->
+<body style="background-color: #5e4c46;"></body>
+
+<!--- product -->
 <div class="wrapper">
-<div class="container-fluid">
-<div class="row ">
-    
-
-{% for product in products %}
-
-
-
-  <div class="col-lg-6 col-sm-11">
-    
-    <div class="thumbnail">
-    <img class="materialboxed imgurl" src="{{ product.image }}"> 
-      
-    
-      <div class="caption">
-        <h4>{{ product.name|truncatewords:10 }}</h4>
-        <p>{{ product.description|truncatewords:20 }}<span style="visibility:hidden" maxlength="50"></span></p>
-        <h4>£{{ product.price }}</h4>
-        <p><a href="{% url 'checkout' %}" class="btn btn-primary button col-md-12 col-lg-4" role="button">Checkout</a> <a href="{% url 'add_to_cart' product.id %}" class="btn btn-default button col-md-12 col-lg-4" role="button">Add To Cart</a></p>
+  <div class="container-fluid">
+    <div class="row">
+      {% for product in products %}
+      <!-- bootstrap grid -->
+      <div class="col-lg-6 col-sm-11">
+        <div class="thumbnail">
+          <!-- product image -->
+          <img class="materialboxed imgurl" src="{{ product.image }}">
+          <div class="caption">
+            <!-- product name -->
+            <h4>{{ product.name|truncatewords:10 }}</h4>
+            <!-- product description -->
+            <p>{{ product.description|truncatewords:20 }}<span style="visibility:hidden" maxlength="50"></span></p>
+            <!-- price of product -->
+            <h4>£{{ product.price }}</h4>
+            <!-- checkout button -->
+            <p><a href="{% url 'checkout' %}" class="btn btn-primary button col-md-12 col-lg-4" role="button">Checkout</a>
+            <!-- add to cart button -->
+            <a href="{% url 'add_to_cart' product.id %}" class="btn btn-default button col-md-12 col-lg-4" role="button">Add To Cart</a></p>
+          </div>
+        </div>
       </div>
+{% endfor %} 
     </div>
   </div>
-  
-  
- <!--<form method="post" action="{% url 'add_to_cart' product.id %}">-->
- <!--               {% csrf_token %}-->
- <!--               <div class="input-group">-->
- <!--                   <input name='quantity' type="number" min="1" max="999" class="form-control" placeholder="Quantity">-->
- <!--                   <span class="input-group-btn">-->
- <!--                           <button class="btn btn-success" type="submit">Add</button>-->
- <!--                         </span>-->
- <!--               </div>-->
-                <!-- /input-group -->
-
-
-{% endfor %} 
-
 </div>
-  </div></div>
+
+<!-- end of template -->
 {% endblock %}

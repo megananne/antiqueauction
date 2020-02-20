@@ -1,52 +1,65 @@
-{% extends 'base.html' %} {% load bootstrap_tags %} {% load static from staticfiles %} {% block content %}
+<!-- extends base template -->
+{% extends 'base.html' %}
+<!-- to style webpage -->
+{% load bootstrap_tags %}
+{% load static from staticfiles %}
+{% block content %}
+
+<!-- home page image -->
 <div class="row  cover">
+    <!--- clock image - cover page -->
     <img src="static/images/homecover.jpg">
 </div>
 
-
-
+<!-- search bar -->
 <div class="container1">
     <div class="display">
+        <!-- form -->
         <form action="" method="get">
             <input type="text" name="q">
+            <!-- submit button for search bar -->
             <button type="submit" class="btn btn-default submitbutton col-md-4 col-lg-1">Search</button>
         </form>
     </div>
 </div>
 
-
+<!-- four product home images -->
 <div class="row indeximages">
     <div class="column">
+        <!-- car home image -->
         <img src="img_nature.jpg">
     </div>
     <div class="column">
+        <!-- furniture home image -->
         <img src="img_snow.jpg">
     </div>
     <div class="column">
+        <!-- toy home image -->
         <img src="img_mountains.jpg">
     </div>
     <div class="column">
+        <!-- jewellery home image -->
         <img src="img_lights.jpg">
     </div>
 </div>
 
-
+<!-- product buttons -->
 <div class=" indexbuttons">
+    <!-- all products -->
     <a type="button" class="btn btn-default button col-md-4 col-lg-1" href="{% url 'products' %}">All</a>
+    <!-- art -->
     <a type="button" class="btn btn-default button col-md-4 col-lg-1" href="{% url 'art' %}">Art</a>
+    <!-- cars -->
     <a type="button" class="btn btn-default button col-md-4 col-lg-1" href="{% url 'classiccars' %}">Cars</a>
+    <!-- clocks -->
     <a type="button" class="btn btn-default button col-md-4 col-lg-1" href="{% url 'clocks' %}">Clocks</a>
+    <!--- furniture -->
     <a type="button" class="btn btn-default button col-md-4 col-lg-1" href="{% url 'furniture' %}">Furniture</a>
+    <!-- jewellery -->
     <a type="button" class="btn btn-default button col-md-4 col-lg-1" href="{% url 'jewellery' %}">Jewellery</a>
+    <!-- toys -->
     <a type="button" class="btn btn-default button col-md-4 col-lg-1" href="{% url 'toys' %}">Toys</a>
-
 </div>
 
-
-
-
-
-
-
-
+<!-- end of template -->
 {% endblock %}

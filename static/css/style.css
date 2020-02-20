@@ -1,16 +1,8 @@
-/*html{*/
-
-/*  height:100%;*/
-
-/*}*/
-
+/* body of webpage */
 body {
   background-color: #dbc084;
   color: #c97a20;
   font-family: sans-serif;
-  /*height: 100%;*/
-  /*display: flex;*/
-  /*flex-direction: column;*/
 }
 
 a {
@@ -22,41 +14,36 @@ a {
 
 /* social media icons */
 
+/* twitter icon */
 .fa-twitter {
   margin-left: 5px;
   color: white;
   float: right;
   font-size: 20px;
 }
-
+/* instagram icon */
 .fa-instagram {
   color: white;
   float: right;
   margin-left: 5px;
   font-size: 20px;
 }
-
+/* facebook icon */
 .fa-facebook {
   float: right;
   color: white;
   font-size: 20px;
   margin-left: 5px;
 }
-
-/*footer{*/
-
-/*  flex-shrink: 0;*/
-
-/*}*/
-
+/* footer body */
 .page-footer {
   background-color: #b1a296;
   width: 100%;
   color: white;
 }
 
-
 /* end of footer */
+
 
 .form-control {
   width: 80%;
@@ -89,14 +76,15 @@ a {
 
 /* navbar */
 
+/*nav bar */
 .nav {
   width: 100%;
 }
-
+/* nav tabs */
 .nav-item {
   position: relative;
 }
-
+/* nav dropdown */
 .navbar-collapse ul li a.nav-link:before {
   position: absolute;
   bottom: -5px;
@@ -113,7 +101,7 @@ a {
   -webkit-transform: translateY(10px);
   transform: translateY(10px);
 }
-
+/* nav dropdown hover */
 .navbar-collapse ul li:hover a.nav-link:before {
   opacity: 1;
   -ms-transform: translateY(0px);
@@ -122,18 +110,18 @@ a {
   bottom: 0px;
   background-color: #b1a296;
 }
-
+/* nav dropdown hover */
 .dropdown-item:hover,
 .dropdown-item:focus {
   color: #c97a20;
   text-decoration: none;
   background-color: #b1a296;
 }
-
+/* nav dropdown menu */
 .dropdown-menu {
   border: 0px;
 }
-
+/* navbar body */
 .navbar {
   background-color: #b1a296
 }
@@ -141,8 +129,11 @@ a {
 
 /* end of navbar */
 
+
+
 /* buttons */
 
+/* home page products button */
 .button {
   background-color: #c97a20;
   border: none;
@@ -156,7 +147,7 @@ a {
   margin-top: 100px;
   margin-bottom: 50px;
 }
-
+/* mobile screen size */
 @media only screen and (max-width: 600px) {
   .button {
     margin-top: 5px;
@@ -164,7 +155,7 @@ a {
     margin-left: 2%;
   }
 }
-
+/* mobile screen size */
 @media only screen and (max-width: 600px) {
   .button1 {
     margin-top: 50px;
@@ -172,22 +163,22 @@ a {
     margin-left: 2%;
   }
 }
-
+/* login button */
 .btn-login {
   margin: 0 auto;
 
 }
-
+/* active button */
 .btn:active {
   background-color: #b1a296;
   color: white;
 }
-
+/* button hover */
 .btn:hover {
   background-color: #b1a296;
   color: white;
 }
-
+/* home page products button */
 .button1 {
   background-color: #c97a20;
   border: none;
@@ -199,11 +190,11 @@ a {
   display: inline-block;
   font-size: 16px;
 }
-
+/* active button */
 .button1:active {
   background: olive;
 }
-
+/* submit payment button */
 .submit_payment_btn {
   background-color: #c97a20;
   border: none;
@@ -218,7 +209,7 @@ a {
   font-size: 16px;
   margin-bottom: 50px;
 }
-
+/* mobile screen size */
 @media only screen and (max-width: 600px) {
   .submit_payment_btn {
     background-color: #c97a20;
@@ -235,7 +226,7 @@ a {
     margin-bottom: 50px;
   }
 }
-
+/* submit button */
 .submitbutton {
   background-color: #c97a20;
   border: none;
@@ -250,14 +241,15 @@ a {
   margin-left: 200px;
   margin-bottom: 30px;
 }
-
-
+/* desktop screen size */
 @media only screen and (max-width: 600px) {
+  /* submit button */
   .submitbutton {
     margin-top: 50px;
     margin-bottom: 5px;
     margin-left: 0px;
   }
+  /* checkout button */
   .checkout_btn {
     background-color: #c97a20;
     border: none;
@@ -267,16 +259,17 @@ a {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-
     margin-top: 20px;
     font-size: 16px;
   }
 }
-
+/* tablet screen size */
 @media only screen and (min-width: 768px) {
+  /* submit button */
   .submitbutton {
     margin-left: 35%;
   }
+  /* checkout button */
   .checkout_btn {
     background-color: #c97a20;
     border: none;
@@ -292,8 +285,9 @@ a {
     font-size: 16px;
   }
 }
-
+/* tablet screen size */
 @media only screen and (min-width: 768px) {
+  /* checkout button on profile page */
   .profilebuttons1 {
     background-color: #c97a20;
     border: none;
@@ -306,6 +300,7 @@ a {
     display: inline-block;
     margin-bottom: 5px;
   }
+  /* Cart button on profile page */
   .profilebuttons2 {
     background-color: #c97a20;
     border: none;
@@ -318,11 +313,13 @@ a {
     display: inline-block;
     margin-right: 20px;
   }
+  /* title */
   h2 {
     margin-left: 100px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
+  /* profile form */
   .profileform {
     border-style: solid;
     border-width: 2px;
@@ -338,8 +335,9 @@ a {
     padding-bottom: 10px;
   }
 }
-
+/* mobile screen size */
 @media only screen and (max-width: 600px) {
+  /* profile form */
     .profileform {
     border-style: solid;
     border-width: 2px;
@@ -353,9 +351,11 @@ a {
     padding-top: 10px;
     padding-bottom: 10px;
   }
+  /* profile form */
   .form-group{
     font-size: 14px;
   }
+  /* checkout button on profile page */
     .profilebuttons1 {
     background-color: #c97a20;
     border: none;
@@ -368,6 +368,7 @@ a {
     display: inline-block;
     margin-bottom: 5px;
   }
+  /* cart button on profile page */
   .profilebuttons2 {
     background-color: #c97a20;
     border: none;
@@ -382,37 +383,9 @@ a {
   }
 }
 
+/* end of buttons */
 
 
-.edit_btn {
-  background-color: #c97a20;
-  border: none;
-  color: white;
-  padding-left: 32px;
-  padding-right: 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-
-}
-
-
-
-
-
-.totaltext {
-  margin-left: 200px;
-}
-
-.cover {
-  width: 100%;
-  height: 75%;
-  overflow: hidden;
-}
-
-.cover>img {
-  width: 100%;
-}
 
 .row {
   width: 100%;
@@ -420,36 +393,66 @@ a {
 
 /* products pages */
 
+/* products */
 .caption {
   color: white;
 }
-
+/* mobile screen size */
 @media screen and (max-width: 600px) {
+  /*product text */
   p {
     font-size: 14px;
   }
 }
-
+/* background colour / body of products page */
 .page-id-2 {
   background-color: #807b6c;
 }
-
-
-
+/* heading product page */
 .headingtxt {
   color: #c97a20;
   margin-top: 50px;
   margin-left: 550px;
 }
-
-@media only screen and (min-width: 768px) {
-  .indexbuttons {
-    margin-left: 25%;
+/* desktop screen size */
+@media screen and (min-width: 600px) {
+  /* product image */
+  .imgurl{
+  width: 200px;
+  margin-left: 70px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  height:200px;
+  border-color: white;
+  border-style: solid;
+  border-width: 5px;
   }
 }
+/* mobile screen size */
+@media screen and (max-width: 600px) {
+  /* product image */
+.imgurl{
+  width: 70%;
+  margin-left: 20%;
+  margin-bottom: 5px;
+  margin-top:  5px;
+  border-color: white;
+  border-style: solid;
+  border-width: 2px;
+  }
+}
+/* product page body */
+.wrapper {
+  padding-left: 20%;
+  padding-right: 20%;
+  margin-top: 30px;
+}
+/* end of products page */
+
 
 /* about page */
 
+/* about us paragraph */
 .about {
   width: 90%;
   border-style: solid;
@@ -462,7 +465,7 @@ a {
   text-align: center;
   background-color: white;
 }
-
+/* contact us paragraph */
 .contact {
   width: 90%;
   border-style: solid;
@@ -476,8 +479,7 @@ a {
   margin-left: 90px;
   background-color: #807b6c;
 }
-
-
+/* delivery paragraph */
 .delivery {
   width: 90%;
   border-style: solid;
@@ -491,9 +493,9 @@ a {
   background-color: white;
   margin-bottom: 40px;
 }
-
-
+/* mobile screen size */
 @media screen and (max-width: 600px) {
+  /* about us paragraph */
   .about {
     font-size: 14px;
     margin-left: 5%;
@@ -503,8 +505,9 @@ a {
     font-size: 20px;
   }
 }
-
+/* mobile screen size */
 @media screen and (max-width: 600px) {
+  /* contact us paragraph */
   .contact {
     font-size: 14px;
     margin-left: 5%;
@@ -517,8 +520,9 @@ a {
     font-size: 14px;
   }
 }
-
+/* mobile screen size */
 @media screen and (max-width: 600px) {
+  /* delivery paragpraph */
   .delivery {
     font-size: 14px;
     margin-left: 5%;
@@ -529,59 +533,12 @@ a {
   }
 }
 
+/* end of about page */
 
 
+/* Reviews Page */
 
-
-
-
-
-
-
-
-
-
-/*Cart*/
-
-.shopping-cart {
-  width: 750px;
-  height: 423px;
-  margin: 80px auto;
-  background: #FFFFFF;
-  box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.10);
-  border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-}
-
-.title {
-  height: 60px;
-  border-bottom: 1px solid #E1E8EE;
-  padding: 20px 30px;
-  color: #5E6977;
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.item {
-  padding: 20px 30px;
-  height: 120px;
-  display: flex;
-}
-
-.item:nth-child(3) {
-  border-top: 1px solid #E1E8EE;
-  border-bottom: 1px solid #E1E8EE;
-}
-
-
-
-
-
-/*Style the container with a rounded border,*/
-
-/*grey background and some padding and margin*/
-
+/* customer review */
 .container {
   border: 2px solid #ccc;
   background-color: #eee;
@@ -591,67 +548,44 @@ a {
   margin: 16px 0;
   margin-bottom: 20px;
 }
-
 /*Clear floats after containers */
-
 .container::after {
   content: "";
   clear: both;
   display: table;
 }
-
 /*Float images inside the container to the left. Add a right margin, and style the image as a circle */
-
 .container img {
   float: left;
   margin-right: 20px;
   border-radius: 50%;
 }
-
 /*Increase the font-size of a span element */
-
 .container span {
   font-size: 20px;
   margin-right: 15px;
 }
-
-/*Add media queries for responsiveness. This will center both the text and the image inside the container */
-
-@media (max-width: 500px) {
+/* mobile screen size */
+@media (max-width: 600px) {
+  /* customer reviews */
   .container {
     text-align: center;
   }
-
+  /* customer reviews */
   .container img {
     margin: auto;
     float: none;
     display: block;
   }
 }
-
-
-
-
-
-
-.reviews {
-  margin-left: 400px;
-}
-
+/* mobie screen size */
 @media screen and (max-width: 600px) {
   .reviews {
     margin-left: 10px;
     margin-right: 10px
   }
 }
-
-@media screen and (max-width: 800px) {
-  .reviews {
-    margin-left: 2%;
-    margin-right: 2%;
-  }
-}
-
+/* title */
 .reviewheading {
   text-align: center;
   margin-top: 50px;
@@ -659,6 +593,12 @@ a {
   margin-bottom: 50px;
 }
 
+/* end of reviews page */
+
+
+/* terms of use page */
+
+/* terms and conditions paragraph */
 .terms {
   width: 1400px;
   background-color: white;
@@ -669,7 +609,7 @@ a {
   margin-bottom: 50px;
   margin-left: 10%;
 }
-
+/* private policy paragraph */
 .private {
   width: 1400px;
   background-color: white;
@@ -680,7 +620,7 @@ a {
   margin-bottom: 50px;
   margin-left: 10%;
 }
-
+/* returns policy paragraph */
 .returns {
   width: 1400px;
   background-color: white;
@@ -691,24 +631,27 @@ a {
   margin-bottom: 50px;
   margin-left: 10%;
 }
-
-
+/* mobile screen size */
 @media screen and (max-width: 600px) {
+  /* terms of use paragraph */
   .terms {
     font-size: 14px;
     margin-left: 0px;
     margin-right: 20px;
   }
+  /* headings */
   h2 {
     font-size: 20px;
   }
 }
-
+/* mobile screen size */
 @media screen and (max-width: 600px) {
+  /* returns policy paragraph */
   .returns {
     font-size: 14px;
     margin-left: 0px;
   }
+  /* headings */
   h2 {
     font-size: 14px;
   }
@@ -716,18 +659,24 @@ a {
     font-size: 14px;
   }
 }
-
+/* mobile screen size */
 @media screen and (max-width: 600px) {
+  /* private policy paragraph */
   .private {
     font-size: 14px;
     margin-left: 0px;
   }
+  /* heading */
   h2 {
     font-size: 20px;
   }
 }
+/* end of terms of use page */
 
 
+/* Support page */
+
+/* support form */
 .form-group2 {
   width: 600px;
   background-color: white;
@@ -737,15 +686,14 @@ a {
   margin-left: 270px;
   border: 5px solid #b1a296;
   box-shadow: 5px 10px 8px #888888;
-
 }
-
+/* form label */
 .form-group2 label {
   color: #c97a20;
 }
-
-
+/* tablet screen size */
 @media only screen and (min-width: 768px) {
+  /* title */
   .supportheading {
     width: 900px;
     text-align: center;
@@ -756,6 +704,7 @@ a {
     border: 5px solid #b1a296;
     box-shadow: 5px 10px 8px #888888;
   }
+  /* support page body */
   .support2 {
     width: 1000px;
     background-color: #807b6c;
@@ -765,7 +714,7 @@ a {
     border: 5px solid #b1a296;
     box-shadow: 5px 10px 8px #888888;
   }
-
+  /* submit button - support page */
   .submitbutton2 {
     background-color: #c97a20;
     border: none;
@@ -781,32 +730,29 @@ a {
     margin-left: 420px;
     margin-bottom: 30px;
   }
-
+  /* support form */
   .form-group2 {
     width: 500px;
     background-color: white;
-
     color: #c97a20;
-
     margin-left: 25%;
     border: 5px solid #b1a296;
     box-shadow: 5px 10px 8px #888888;
-
   }
-
+  /* form label */
   .form-group2 label {
     color: #c97a20;
   }
+  /* form control */
   .form-control {
     width: 80%;
     margin-left: 10%;
   }
 }
-
-
+/* mobile screen size */
 @media screen and (min-width: 600px) {
+  /* title */
   .supportheading {
-
     text-align: center;
     padding: 10px;
     margin-left: 10px;
@@ -816,6 +762,7 @@ a {
     border: 5px solid #b1a296;
     box-shadow: 5px 10px 8px #888888;
   }
+  /* support page body */
   .support2 {
     background-color: #807b6c;
     margin-bottom: 50px;
@@ -825,82 +772,45 @@ a {
     box-shadow: 5px 10px 8px #888888;
   }
 }
+/* end of support page */
 
 
-@media screen and (min-width: 600px) {
-  .imgurl{
-  width: 200px;
-  margin-left: 70px;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  height:200px;
-  border-color: white;
-  border-style: solid;
-  border-width: 5px;
+/* login page */
 
-}
-}
-
-@media screen and (max-width: 600px) {
-.imgurl{
-  width: 70%;
-  margin-left: 20%;
-  margin-bottom: 5px;
-  margin-top:  5px;
-  border-color: white;
-  border-style: solid;
-  border-width: 2px;
-}
-}
-
-
-
-
-
+/* login form */
 .loginform {
   margin-top: 550px;
   margin: 0 auto;
   width: 50%;
-
 }
-
+/* login page body */
 .login2 {
   margin-top: 30px;
   margin-bottom: 30px;
 }
+/* end of log in page */
 
 
+/* sign up page */
 
-
-
-
+/* sign up form */
 .signupform {
   margin-top: 50px;
   margin-left: 650px;
   width: 600px;
 }
+/* end of sign up page */
 
 
-.wrapper {
-  padding-left: 20%;
-  padding-right: 20%;
-  margin-top: 30px;
-}
+/* Checkout Page */
 
-
-
-
-
-
-
-
-
+/* Checkout form */
 .checkoutform {
   background-color: #5e4c46;
   width: 500px;
   margin: 0 auto;
 }
-
+/* title */
 .checkouttitle {
   text-align: center;
 }
@@ -910,20 +820,22 @@ a {
 
 
 
+/* Cart Page */
 
-
+/* tablet screen size */
 @media only screen and (min-width: 768px) {
-
+  /* cart products */
   .cartitems {
     background-color: #5e4c46;
     width: 500px;
   }
+  /* checkout form */
   .checkoutform {
     background-color: #5e4c46;
     width: 500px;
   }
 }
-
+/* mobile screen size */
 @media only screen and (max-width: 600px) {
   .cartitems {
     background-color: #5e4c46;
@@ -934,33 +846,91 @@ a {
     width: 100%;
   }
 }
-
+/* desktop screen size */
 @media only screen and (max-width: 768px) {
+  /* cart products */
   .cartitems {
     background-color: #5e4c46;
     width: 100%;
   }
+  /* checkout form */
   .checkoutform {
     background-color: #5e4c46;
     width: 100%;
   }
 }
-
-
+/* total price heading */
+.totaltext {
+  margin-left: 200px;
+}
+/* cart page body */
 .cartpage {
   background-color: #5e4c46;
   width: 500px;
-
   padding-left: 50px;
   margin-top: 50px;
 }
+.shopping-cart {
+  width: 750px;
+  height: 423px;
+  margin: 80px auto;
+  background: #FFFFFF;
+  box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.10);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+/* title */
+.title {
+  height: 60px;
+  border-bottom: 1px solid #E1E8EE;
+  padding: 20px 30px;
+  color: #5E6977;
+  font-size: 18px;
+  font-weight: 400;
+}
+/* product item */
+.item {
+  padding: 20px 30px;
+  height: 120px;
+  display: flex;
+}
+/* product item */
+.item:nth-child(3) {
+  border-top: 1px solid #E1E8EE;
+  border-bottom: 1px solid #E1E8EE;
+}
+/* end of cart page */
 
+
+/* home page */
+
+/* tablet screen size */
+@media only screen and (min-width: 768px) {
+  /* products button on home page */
+  .indexbuttons {
+    margin-left: 25%;
+  }
+}
+/* four images on home page*/
 .column {
   float: left;
   width: 25%;
   padding: 10px;
 }
-
+/* home page images */
 .indeximages {
   margin-left: 5%;
 }
+/* main home image */
+.cover {
+  width: 100%;
+  height: 75%;
+  overflow: hidden;
+}
+/* main home image */
+.cover>img {
+  width: 100%;
+}
+
+/* end of home page */

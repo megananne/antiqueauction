@@ -545,6 +545,7 @@ a {
   border-radius: 5px;
   box-shadow: 5px 10px 8px #c97a20;
   padding: 16px;
+  margin-left: 100px;
   margin: 16px 0;
   margin-bottom: 20px;
 }
@@ -582,7 +583,14 @@ a {
 @media screen and (max-width: 600px) {
   .reviews {
     margin-left: 10px;
-    margin-right: 10px
+    margin-right: 10px;
+  }
+}
+/* desktop screen size */
+@media screen and (min-width: 600px) {
+  .reviews {
+    margin-left: 20%;
+    margin-right: 10px;
   }
 }
 /* title */

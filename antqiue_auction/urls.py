@@ -36,7 +36,6 @@ from .settings import MEDIA_ROOT
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    # url(r'^$', index, name='index'),
     url(r'^terms/$', terms),
     url(r'^support/$', support),
     url(r'^reviews/$', reviews),

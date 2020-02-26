@@ -96,7 +96,6 @@ will be asked to fill in shipping address and bank details etc.
 
 ## Features
 
-* Search bar on the home page
 * Help form on the support page
 * User account
 * Links to products on home page
@@ -126,7 +125,8 @@ to create these reviews. I decided to create them all in seperate divs under one
 listed under one another. I have also used a heading to show the total price of all products. There is a 'checkout' button below the cart items which allows the user to checkout and proceed to payment section. On the 
 checkout page, it shows the user the items in the cart that they're are about to purchase. Underneath this is the payment form. The user would need to input bank details into this form and then click Submit payment. 
 This would then be purchased by the user and completed by 'Stripe Payments'. In the footer i decided to use headings and links. I have stated the contact details and address on the left section off the footer. In the
-middle section of the footer i decided to create links to pages such as support, reviews and terms and conditions. On the right side of the footer i created links to all categories.(products).
+middle section of the footer i decided to create links to pages such as, reviews and terms and conditions. On the right side of the footer i created links to all categories.(products). Unfortunately i ran out of time,
+so i wasn't able to add the functionality of the search bar and support form, so i have removed them. These features would be the next thing to add to the site.
 
 
 ## Features left to implement

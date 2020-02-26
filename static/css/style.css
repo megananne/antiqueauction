@@ -923,7 +923,7 @@ a {
 /* four images on home page*/
 .column {
   float: left;
-  width: 25%;
+  width: 5%;
   padding: 10px;
 }
 /* home page images */
@@ -941,4 +941,7 @@ a {
   width: 100%;
 }
 
+.img1{
+  width: 5%;
+}
 /* end of home page */
